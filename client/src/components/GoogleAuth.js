@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { logInWithGoogle, logOut } from '../actions/authActions'; 
+
 class GoogleAuth extends React.Component {
 
     componentDidMount() {
@@ -12,7 +13,6 @@ class GoogleAuth extends React.Component {
                 this.auth = window.gapi.auth2.getAuthInstance();
                 this.onAuthChange(this.auth.isSignedIn.get());
                 this.auth.isSignedIn.listen(this.onAuthChange);
-                
             });
         });
         
@@ -31,9 +31,10 @@ class GoogleAuth extends React.Component {
     handleClickSignIn = () => {
         this.auth.signIn(); 
     };
+
     handleClickSignOut = () => {
         this.auth.signOut();
-    }
+    };
 
     renderAuthButton() {
         if(this.props.isSignedIn === null) {

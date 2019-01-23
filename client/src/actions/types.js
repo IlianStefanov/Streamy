@@ -16,3 +16,5 @@ export const DELETE_POST = 'DELETE_POST';
 
 export const LOG_IN_WITH_GOOGLE = 'LOG_IN_WITH_GOOGLE';
 export const LOG_OUT = 'LOG_OUT';
+export const CREATE_STREAM = 'CREATE_STREAM';
+export const GET_ALL_STREAMS = 'GET_ALL_STREAMS';
